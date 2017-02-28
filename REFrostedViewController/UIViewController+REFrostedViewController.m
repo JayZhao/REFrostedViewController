@@ -32,6 +32,8 @@
 {
     [self addChildViewController:controller];
     controller.view.frame = frame;
+    controller.view.translatesAutoresizingMaskIntoConstraints = YES;
+    controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:controller.view];
     [controller didMoveToParentViewController:self];
 }
